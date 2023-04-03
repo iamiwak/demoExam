@@ -22,3 +22,29 @@ D:\4is2\timofeev\demo\Столовые приборы\Project\Culteries\obj\Debu
 D:\4is2\timofeev\demo\Столовые приборы\Project\Culteries\obj\Debug\Culteries.csproj.CopyComplete
 D:\4is2\timofeev\demo\Столовые приборы\Project\Culteries\obj\Debug\Culteries.exe
 D:\4is2\timofeev\demo\Столовые приборы\Project\Culteries\obj\Debug\Culteries.pdb
+D:\4-IS-2\timofeev\demo\Culteries\bin\Debug\Culteries.exe.config
+D:\4-IS-2\timofeev\demo\Culteries\bin\Debug\Culteries.exe
+D:\4-IS-2\timofeev\demo\Culteries\bin\Debug\Culteries.pdb
+D:\4-IS-2\timofeev\demo\Culteries\bin\Debug\EntityFramework.dll
+D:\4-IS-2\timofeev\demo\Culteries\bin\Debug\EntityFramework.SqlServer.dll
+D:\4-IS-2\timofeev\demo\Culteries\bin\Debug\EntityFramework.xml
+D:\4-IS-2\timofeev\demo\Culteries\bin\Debug\EntityFramework.SqlServer.xml
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries.csprojAssemblyReference.cache
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\AuthorizationWindow.g.cs
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\MainWindow.g.cs
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\App.g.cs
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries_Content.g.cs
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries_MarkupCompile.cache
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries_MarkupCompile.lref
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\App.baml
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\AuthorizationWindow.baml
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\MainWindow.baml
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries.g.resources
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries.Properties.Resources.resources
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries.csproj.GenerateResource.cache
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries.csproj.CoreCompileInputs.cache
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries.csproj.CopyComplete
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries.exe
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\Culteries.pdb
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\EditingPage.g.cs
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\EditingPage.baml

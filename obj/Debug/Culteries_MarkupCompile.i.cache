@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\4is2\timofeev\demo\Столовые приборы\Project\Culteries\obj\Debug\
+D:\4-IS-2\timofeev\demo\Culteries\obj\Debug\
 Culteries
 none
 false
 DEBUG;TRACE
-D:\4is2\timofeev\demo\Столовые приборы\Project\Culteries\App.xaml
-2-262298438
-2888371905
-2032782720
-18-865605206
-AuthorizationWindow.xaml;MainWindow.xaml;
+D:\4-IS-2\timofeev\demo\Culteries\App.xaml
+3-1339930269
+211769445
+23-192546611
+18791517458
+AuthorizationWindow.xaml;EditingPage.xaml;MainWindow.xaml;
 
-True
+False
 

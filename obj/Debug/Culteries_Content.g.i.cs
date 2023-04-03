@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("base/culteriesmodel.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("base/culteriesmodel.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("base/culturiesmodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("base/culturiesmodel.tt")]
 
 

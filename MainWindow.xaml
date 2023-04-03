@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Culteries"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        MinHeight="600"
+        MinWidth="900"
+        Title="Список товаров" Height="600" Width="900">
     <Grid>
-        
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden">
+            <StackPanel Margin="24" x:Name="GoodsBlock">
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
