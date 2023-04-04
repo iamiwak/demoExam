@@ -2,10 +2,11 @@
 <Schema Namespace="CulteriesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Category">
     <Key>
-      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="CulteriesModel.FK_Product_Category" FromRole="Category" ToRole="Product" />
   </EntityType>
   <EntityType Name="Manafactures">
     <Key>
@@ -57,14 +58,15 @@
     <Property Name="ProductCategoryID" Type="Int32" Nullable="false" />
     <Property Name="ProductPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="ProductManufacturerID" Type="Int32" Nullable="false" />
-    <Property Name="ProductCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ProductCost" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="ProductDiscountAmount" Type="Byte" />
     <Property Name="ProductQuantityInStock" Type="Int32" Nullable="false" />
-    <Property Name="ProductStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ProductProviderID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Manafactures" Relationship="Self.FK_Product_Manafactures" FromRole="Product" ToRole="Manafactures" />
     <NavigationProperty Name="OrderProduct" Relationship="Self.FK_OrderProduct_Product" FromRole="Product" ToRole="OrderProduct" />
     <NavigationProperty Name="Providers" Relationship="Self.FK_Product_Providers" FromRole="Product" ToRole="Providers" />
+    <NavigationProperty Name="Category" Relationship="CulteriesModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
   </EntityType>
   <EntityType Name="Providers">
     <Key>
@@ -253,5 +255,21 @@
       <End Role="Role" EntitySet="Role" />
       <End Role="User" EntitySet="User" />
     </AssociationSet>
+    <AssociationSet Name="FK_Product_Category" Association="CulteriesModel.FK_Product_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_Product_Category">
+    <End Type="CulteriesModel.Category" Role="Category" Multiplicity="1" />
+    <End Type="CulteriesModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

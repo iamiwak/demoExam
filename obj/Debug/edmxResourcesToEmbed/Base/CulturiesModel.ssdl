@@ -2,10 +2,10 @@
 <Schema Namespace="CulteriesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Category">
     <Key>
-      <PropertyRef Name="CategoryID" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Manafactures">
     <Key>
@@ -48,10 +48,10 @@
     <Property Name="ProductCategoryID" Type="int" Nullable="false" />
     <Property Name="ProductPhoto" Type="image" />
     <Property Name="ProductManufacturerID" Type="int" Nullable="false" />
-    <Property Name="ProductCost" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="ProductCost" Type="decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="ProductDiscountAmount" Type="tinyint" />
     <Property Name="ProductQuantityInStock" Type="int" Nullable="false" />
-    <Property Name="ProductStatus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductStatus" Type="nvarchar(max)" />
     <Property Name="ProductProviderID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Providers">
@@ -157,15 +157,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_OrderProduct_Product">
-    <End Role="Product" Type="Self.Product" Multiplicity="1" />
-    <End Role="OrderProduct" Type="Self.OrderProduct" Multiplicity="*" />
+  <Association Name="FK_Product_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Product">
-        <PropertyRef Name="ProductArticleNumber" />
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
       </Principal>
-      <Dependent Role="OrderProduct">
-        <PropertyRef Name="ProductArticleNumber" />
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -225,9 +225,9 @@
       <End Role="Order" EntitySet="Order" />
       <End Role="OrderProduct" EntitySet="OrderProduct" />
     </AssociationSet>
-    <AssociationSet Name="FK_OrderProduct_Product" Association="Self.FK_OrderProduct_Product">
+    <AssociationSet Name="FK_Product_Category" Association="Self.FK_Product_Category">
+      <End Role="Category" EntitySet="Category" />
       <End Role="Product" EntitySet="Product" />
-      <End Role="OrderProduct" EntitySet="OrderProduct" />
     </AssociationSet>
     <AssociationSet Name="FK_Product_Manafactures" Association="Self.FK_Product_Manafactures">
       <End Role="Manafactures" EntitySet="Manafactures" />

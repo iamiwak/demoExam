@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Culteries"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Редактирование товара" Height="448" Width="600">
+        Title="Редактирование товара" Height="512" Width="600">
     <Border Padding="24">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <StackPanel.Resources>
@@ -21,7 +21,7 @@
 
             <StackPanel Orientation="Horizontal">
                 <Label Content="Категория: " Width="150"/>
-                <ComboBox Width="300" x:Name="CategoryComboBox" DisplayMemberPath="CategoryName"/>
+                <ComboBox Width="300" x:Name="CategoryComboBox" DisplayMemberPath="name"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
@@ -29,10 +29,15 @@
                 <TextBox Width="300" x:Name="QuantityTextBlock"/>
             </StackPanel>
 
-            <!--<StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
                 <Label Content="Поставщик: " Width="150"/>
-                <TextBox Width="300"/>
-            </StackPanel>-->
+                <ComboBox Width="300" x:Name="ProviderComboBox" DisplayMemberPath="name"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Стоимость товара: " Width="150"/>
+                <TextBox Width="300" x:Name="CostTextBlock"/>
+            </StackPanel>
 
             <StackPanel Orientation="Horizontal">
                 <Label Content="Описание: " Width="150"/>

@@ -7,11 +7,38 @@
         mc:Ignorable="d"
         MinHeight="600"
         MinWidth="900"
-        Title="Список товаров" Height="600" Width="900">
+        Title="Список товаров"
+        Height="600"
+        Width="900">
     <Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Hidden">
-            <StackPanel Margin="24" x:Name="GoodsBlock">
+        <DockPanel Margin="24">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin"
+                                Value="0, 0, 8, 0" />
+                        <Setter Property="Background"
+                                Value="{StaticResource AccentColor}" />
+                        <Setter Property="Foreground"
+                                Value="#fff" />
+                        <Setter Property="Padding"
+                                Value="12" />
+                    </Style>
+                </StackPanel.Resources>
+
+                <Button Content="Обратно к авторизации"
+                        HorizontalAlignment="Left"
+                        Click="OnBackToAuthorizationClick" />
+
+                <Button Content="Добавить товар"
+                        Visibility="Hidden"
+                        x:Name="AddProductButton"
+                        Click="OnAddProductClick" />
             </StackPanel>
-        </ScrollViewer>
+
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" DockPanel.Dock="Top" Margin="0, 24, 0, 12" x:Name="MainScrollView">
+                <StackPanel x:Name="GoodsBlock" />
+            </ScrollViewer>
+        </DockPanel>
     </Grid>
 </Window>

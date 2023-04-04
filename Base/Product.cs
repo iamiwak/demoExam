@@ -26,7 +26,7 @@ namespace Culteries.Base
         public int ProductCategoryID { get; set; }
         public byte[] ProductPhoto { get; set; }
         public int ProductManufacturerID { get; set; }
-        public Nullable<decimal> ProductCost { get; set; }
+        public decimal ProductCost { get; set; }
         public Nullable<byte> ProductDiscountAmount { get; set; }
         public int ProductQuantityInStock { get; set; }
         public string ProductStatus { get; set; }
@@ -36,5 +36,6 @@ namespace Culteries.Base
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }
         public virtual Providers Providers { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

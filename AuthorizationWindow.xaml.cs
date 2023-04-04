@@ -64,21 +64,20 @@ namespace Culteries
                 }
             }
 
-            if (_db.User.FirstOrDefault(u => u.UserLogin == login && u.UserPassword == password) == null)
+            User user = _db.User.FirstOrDefault(u => u.UserLogin == login && u.UserPassword == password);
+            if (user == null)
             {
                 MessageBox.Show("You wrote incorrect password!", "Incorrect password", MessageBoxButton.OK, MessageBoxImage.Error);
                 GenerateCaptcha();
                 return;
             }
 
-            MessageBox.Show("ENTERED LIKE AUTHORIZED USER", "WARNING", MessageBoxButton.OK, MessageBoxImage.Warning);
-            new MainWindow().Show();
+            new MainWindow(user).Show();
             Close();
         }
 
         private void OnGuestLoginClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("ENTERED LIKE GUEST", "WARNING", MessageBoxButton.OK, MessageBoxImage.Warning);
             new MainWindow().Show();
             Close();
         }
